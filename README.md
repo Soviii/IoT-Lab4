@@ -3,7 +3,7 @@
 ## Youtube Link To Video Demo
 https://www.youtube.com/watch?v=ZU3NxqsShkI&ab_channel=Sovi
 
-## Overview of Lab 2
+## Overview of Lab 4
 The goal of lab 4 is to have control over an LED via bluetooth and track the number of
 steps counted from our accelometer and gyroscope sensor and display it on the nRF Connect mobile app as well. 
 The way to do so is by creating a bluetooth instance with our TTGO and connecting to it via smartphone/mobile app. 
