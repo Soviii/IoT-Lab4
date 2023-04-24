@@ -15,7 +15,8 @@ int LED_pin = GPIO_NUM_25;
 class MyCallbacks: public BLECharacteristicCallbacks {
 	void onWrite(BLECharacteristic *pCharacteristic) {
 		std::string value = pCharacteristic->getValue();
-
+		
+		/* Part A */
 		if (value.length() > 0) {
 			if(value == "on"){
 				digitalWrite(LED_pin, HIGH);
@@ -101,6 +102,7 @@ void setup(){
 }
 
 void loop(){
+	/* Part B */
 	float curr_accel = myIMU.readFloatAccelZ() - z_accel_offset; // read acceleration from sensor
 	bool curr_peak = (curr_accel > 1.5 && prev_accel < 1.5); // if we have taken a step, meaning acceleration has increased
 	prev_peak = (curr_accel < prev_accel && prev_peak == true); // needed for if we have found a peak already and do not need to increment for the same step
